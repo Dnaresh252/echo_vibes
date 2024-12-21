@@ -30,7 +30,7 @@ class _SubscriptionState extends State<Subscription> {
                     Colors.white, // Original image colors
                     Colors.black.withOpacity(0.6), // Fading to black
                   ],
-                  stops: [0.6, 1.0], // Adjust these stops for a smooth blend
+                  stops: const [0.6, 1.0], // Adjust these stops for a smooth blend
                 ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
               },
               blendMode: BlendMode.dstIn,
@@ -48,7 +48,7 @@ class _SubscriptionState extends State<Subscription> {
             right: 0,
             child: Container(
               height: MediaQuery.of(context).size.height * 0.6,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -70,14 +70,14 @@ class _SubscriptionState extends State<Subscription> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 30.0),
+                    padding: const EdgeInsets.only(left: 30.0),
                     child: Text("Unlock the Power of",style: GoogleFonts.playfairDisplay(
                       color: Colors.black,
                       fontSize: 30,
                     ),),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(left: 20.0),
+                    padding:  const EdgeInsets.only(left: 20.0),
 
                     child: Text("  Premium Affirmations Today!",style: GoogleFonts.playfairDisplay(
                       color: Colors.black,
@@ -85,7 +85,7 @@ class _SubscriptionState extends State<Subscription> {
                     ),),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(left: 30.0,top: 20),
+                    padding:  const EdgeInsets.only(left: 30.0,top: 20),
                     child: Row(
                       children: [
                         SvgPicture.asset(
@@ -93,16 +93,16 @@ class _SubscriptionState extends State<Subscription> {
                           height: 20,
                           width: 20,
                         ),
-                        SizedBox(width: 13,),
+                        const SizedBox(width: 13,),
                         Text("Unlock All Categories",style: GoogleFonts.playfairDisplay(
-                          color: Color.fromRGBO(61, 83, 0,1),
+                          color: const Color.fromRGBO(61, 83, 0,1),
                         ),)
                       ],
                     )
 
                   ),
                   Padding(
-                      padding:  EdgeInsets.only(left: 30.0,top: 20),
+                      padding:  const EdgeInsets.only(left: 30.0,top: 20),
                       child: Row(
                         children: [
                           SvgPicture.asset(
@@ -110,15 +110,15 @@ class _SubscriptionState extends State<Subscription> {
                             height: 20,
                             width: 20,
                           ),
-                          SizedBox(width: 13,),
+                          const SizedBox(width: 13,),
                           Text("Daily Affirmation Notifications",style: GoogleFonts.playfairDisplay(
-                            color: Color.fromRGBO(61, 83, 0,1),
+                            color: const Color.fromRGBO(61, 83, 0,1),
                           ),)
                         ],
                       )
 
                   ),Padding(
-                      padding:  EdgeInsets.only(left: 30.0,top: 20),
+                      padding:  const EdgeInsets.only(left: 30.0,top: 20),
                       child: Row(
                         children: [
                           SvgPicture.asset(
@@ -126,16 +126,16 @@ class _SubscriptionState extends State<Subscription> {
                             height: 20,
                             width: 20,
                           ),
-                          SizedBox(width: 13,),
+                          const SizedBox(width: 13,),
                           Text("Offline Access to Affirmationss",style: GoogleFonts.playfairDisplay(
-                            color: Color.fromRGBO(61, 83, 0,1),
+                            color: const Color.fromRGBO(61, 83, 0,1),
                           ),)
                         ],
                       )
 
                   ),
                   Padding(
-                      padding:  EdgeInsets.only(left: 30.0,top: 20),
+                      padding:  const EdgeInsets.only(left: 30.0,top: 20),
                       child: Row(
                         children: [
                           SvgPicture.asset(
@@ -143,9 +143,9 @@ class _SubscriptionState extends State<Subscription> {
                             height: 20,
                             width: 20,
                           ),
-                          SizedBox(width: 13,),
+                          const SizedBox(width: 13,),
                           Text("Progress Tracking and Insights",style: GoogleFonts.playfairDisplay(
-                            color: Color.fromRGBO(61, 83, 0,1),
+                            color: const Color.fromRGBO(61, 83, 0,1),
                           ),)
                         ],
                       )

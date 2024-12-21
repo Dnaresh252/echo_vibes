@@ -9,6 +9,8 @@ import 'dart:convert';
 import 'package:intl/intl.dart';
 
 class SentimentScreen extends StatefulWidget {
+  const SentimentScreen({super.key});
+
 
   @override
 
@@ -19,9 +21,9 @@ class _SentimentScreenState extends State<SentimentScreen> {
   final TextEditingController _textController = TextEditingController();
   String _responseText = "";
   bool _isLoading = false;
-  FirebaseService _firebaseService = FirebaseService();
+  final FirebaseService _firebaseService = FirebaseService();
 
-  List<Map<String, dynamic>> _emotionList = [];
+  final List<Map<String, dynamic>> _emotionList = [];
   Random random = Random();
 
   bool _showEmoji = false;
@@ -143,14 +145,14 @@ class _SentimentScreenState extends State<SentimentScreen> {
       _opacity = 1.0;
     });
 
-    Timer(Duration(seconds: 1), () {
+    Timer(const Duration(seconds: 1), () {
       setState(() {
         _topPosition = 0;
         _opacity = 0.0;
       });
     });
 
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       setState(() {
         _showEmoji = false;
       });
@@ -206,7 +208,7 @@ class _SentimentScreenState extends State<SentimentScreen> {
                               children: [
                                 Text(
                                   entry['text'] ?? "",
-                                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                 ),
                                 const SizedBox(height: 8.0),
                                 Row(
@@ -249,7 +251,7 @@ class _SentimentScreenState extends State<SentimentScreen> {
                                               : emotion == 'angry'
                                               ? SvgPicture.asset('assets/angry.svg', height: 17, width: 20)
                                               : SvgPicture.asset('assets/neutral.svg', height: 17, width: 20),
-                                          SizedBox(width: 5),
+                                          const SizedBox(width: 5),
                                           Text(
                                             emotion,
                                             style: const TextStyle(fontSize: 10, color: Colors.black, fontWeight: FontWeight.bold),
@@ -270,7 +272,7 @@ class _SentimentScreenState extends State<SentimentScreen> {
                                         children: [
                                           const SizedBox(width: 7),
                                           SvgPicture.asset('assets/clock-history.svg', height: 15, width: 20),
-                                          SizedBox(width: 5),
+                                          const SizedBox(width: 5),
                                           Text(
                                             "${entry['time'] ?? 'N/A'}",
                                             style: const TextStyle(fontSize: 10, color: Colors.black, fontWeight: FontWeight.bold),
@@ -301,28 +303,28 @@ class _SentimentScreenState extends State<SentimentScreen> {
                             hintText: "Type a message...",
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(color: Colors.grey),
+                              borderSide: const BorderSide(color: Colors.grey),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(color: Colors.grey),
+                              borderSide: const BorderSide(color: Colors.grey),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(color: Colors.black54, width: 2.0),
+                              borderSide: const BorderSide(color: Colors.black54, width: 2.0),
                             ),
                             suffixIcon: ValueListenableBuilder(
                               valueListenable: _textController,
                               builder: (context, TextEditingValue value, child) {
                                 return value.text.isEmpty
                                     ? IconButton(
-                                  icon: Icon(Icons.mic, color: Colors.black54),
+                                  icon: const Icon(Icons.mic, color: Colors.black54),
                                   onPressed: () {
                                     print("Microphone activated");
                                   },
                                 )
                                     : IconButton(
-                                  icon: Icon(Icons.send, color: Colors.black54),
+                                  icon: const Icon(Icons.send, color: Colors.black54),
                                   onPressed: () {
                                     _sendText();
                                     _textController.clear();
@@ -341,12 +343,12 @@ class _SentimentScreenState extends State<SentimentScreen> {
           ),
           if (_showEmoji)
             AnimatedPositioned(
-              duration: Duration(seconds: 2),
+              duration: const Duration(seconds: 2),
               curve: Curves.easeInOut,
               top: _topPosition,
               left: MediaQuery.of(context).size.width / 2 - 50,
               child: AnimatedOpacity(
-                duration: Duration(seconds: 2),
+                duration: const Duration(seconds: 2),
                 opacity: _opacity,
                 child: Lottie.asset(
                   _lottieFile,

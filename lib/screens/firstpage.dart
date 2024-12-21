@@ -26,11 +26,11 @@ class _FirstpageState extends State<Firstpage> {
             height: 500,
             width: 200.0,
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Center(
 
             child: Text("Join us and start creating your path to self-growth.",style: GoogleFonts.playfairDisplay(
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                 color: Colors.black,
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
@@ -44,11 +44,11 @@ class _FirstpageState extends State<Firstpage> {
             ),
           ),
           
-          SizedBox(height: 60,),
+          const SizedBox(height: 60,),
           GestureDetector(
             onTap: ()
             {
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>Loginscreen()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const Loginscreen()));
             },
             child: Container(
               width: 200,
@@ -65,7 +65,7 @@ class _FirstpageState extends State<Firstpage> {
 
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -75,13 +75,13 @@ class _FirstpageState extends State<Firstpage> {
                 fontSize: 13
 
               ),),
-              SizedBox(width: 2,),
+              const SizedBox(width: 2,),
               GestureDetector(
                    onTap: ()
                   {
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>Signup()));
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>const Signup()));
                   },
-                  child: Text("Sign up",style: GoogleFonts.inter(color: Color.fromRGBO(106, 156, 137, 1),
+                  child: Text("Sign up",style: GoogleFonts.inter(color: const Color.fromRGBO(106, 156, 137, 1),
                   fontSize: 16,
                     fontWeight: FontWeight.bold
 

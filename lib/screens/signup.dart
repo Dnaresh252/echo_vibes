@@ -83,14 +83,14 @@ class _SignupState extends State<Signup> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("Error"),
+          title: const Text("Error"),
           content: Text(message),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text("OK"),
+              child: const Text("OK"),
             ),
           ],
         );
@@ -122,7 +122,7 @@ class _SignupState extends State<Signup> {
                 ),
                 SizedBox(height: screenHeight * 0.01),
                 Padding(
-                  padding: EdgeInsets.only(right: 50),
+                  padding: const EdgeInsets.only(right: 50),
                   child: FittedBox(
                     child: Text(
                       "Believe in the magic of",
@@ -137,7 +137,7 @@ class _SignupState extends State<Signup> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 130),
+                  padding: const EdgeInsets.only(right: 130),
                   child: FittedBox(
                     child: Text(
                       "new beginnings.",
@@ -171,7 +171,7 @@ class _SignupState extends State<Signup> {
                           height: 20,
                           width: 20,
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Text(
                           "Sign up with Google",
                           style: GoogleFonts.inter(fontWeight: FontWeight.bold),
@@ -189,12 +189,12 @@ class _SignupState extends State<Signup> {
                       height: 1,
                       color: Colors.black38,
                     ),
-                    SizedBox(width: 6),
+                    const SizedBox(width: 6),
                     Text(
                       "or",
                       style: GoogleFonts.roboto(color: Colors.black54),
                     ),
-                    SizedBox(width: 6),
+                    const SizedBox(width: 6),
                     Container(
                       width: screenWidth * 0.2,
                       height: 1,
@@ -255,7 +255,7 @@ class _SignupState extends State<Signup> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Loginscreen()),
+                          MaterialPageRoute(builder: (context) => const Loginscreen()),
                         );
                       },
                       child: Text(
@@ -282,20 +282,20 @@ class _SignupState extends State<Signup> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(label, style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         TextFormField(
           controller: controller,
           decoration: InputDecoration(
             hintText: hintText,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.black),
+              borderSide: const BorderSide(color: Colors.black),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Color.fromRGBO(37, 113, 128, 1), width: 2),
+              borderSide: const BorderSide(color: Color.fromRGBO(37, 113, 128, 1), width: 2),
             ),
-            contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
             hintStyle: GoogleFonts.inter(
               color: Colors.black54,
               fontWeight: FontWeight.w500,
@@ -330,7 +330,7 @@ class _SignupState extends State<Signup> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(label, style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         TextFormField(
           controller: controller,
           obscureText: _obscureText,
@@ -345,13 +345,13 @@ class _SignupState extends State<Signup> {
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.black),
+              borderSide: const BorderSide(color: Colors.black),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Color.fromRGBO(37, 113, 128, 1), width: 2),
+              borderSide: const BorderSide(color: Color.fromRGBO(37, 113, 128, 1), width: 2),
             ),
-            contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
             hintStyle: GoogleFonts.inter(
               color: Colors.black54,
               fontWeight: FontWeight.w500,
@@ -376,8 +376,8 @@ class _SignupState extends State<Signup> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          backgroundColor: Color.fromRGBO(212, 246, 255,1), // Background color of the dialog
-          child: Container(
+          backgroundColor: const Color.fromRGBO(212, 246, 255,1), // Background color of the dialog
+          child: SizedBox(
 
             height: 200, // Adjust height as needed
             child: Column(
@@ -398,14 +398,14 @@ class _SignupState extends State<Signup> {
                     "Your future is created by what you do today, not tomorrow.",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.sahitya(
-                        textStyle: TextStyle()
+                        textStyle: const TextStyle()
                     )
                 ),
                 const SizedBox(height: 20),
                 GestureDetector(
                   onTap: ()
                   {
-                    Navigator.push(context, MaterialPageRoute(builder:(context)=>Loginscreen()));
+                    Navigator.push(context, MaterialPageRoute(builder:(context)=>const Loginscreen()));
                   },
                   child: Container(
                     width: 100,

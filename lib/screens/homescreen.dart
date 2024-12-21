@@ -3,6 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'loginscreen.dart';
 
 class Homescreen extends StatefulWidget {
+  const Homescreen({super.key});
+
   @override
   State<Homescreen> createState() => _HomescreenState();
 }
@@ -10,11 +12,11 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   Future<void> logout() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.remove('isLoggedIn'); // Clear login flag
+    await prefs.remove('isLoggedIn'); 
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => Loginscreen()),
+      MaterialPageRoute(builder: (context) => const Loginscreen()),
     );
   }
 
@@ -22,15 +24,15 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Screen"),
+        title: const Text("Home Screen"),
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
             onPressed: logout,
           ),
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Text("Welcome to Home Screen!"),
       ),
     );

@@ -45,12 +45,12 @@ class _TestState extends State<Test> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           // Heading and Search Icon Row
           Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                   "Hey Naresh!",
                   style: TextStyle(
@@ -59,7 +59,7 @@ class _TestState extends State<Test> {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Container(
                 width: 50,
                 height: 50,
@@ -67,16 +67,16 @@ class _TestState extends State<Test> {
                   color: Colors.grey.withOpacity(0.4),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.search,
                   color: Colors.black,
                   size: 24,
                 ),
               ),
-              SizedBox(width: 16),
+              const SizedBox(width: 16),
             ],
           ),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
 
           // Horizontal scrollable list of months
           SingleChildScrollView(
@@ -99,7 +99,7 @@ class _TestState extends State<Test> {
                         horizontal: 16.0, vertical: 9.0),
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? Color.fromRGBO(236, 223, 204, 1)
+                          ? const Color.fromRGBO(236, 223, 204, 1)
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
@@ -119,7 +119,7 @@ class _TestState extends State<Test> {
             ),
           ),
 
-          SizedBox(height: 40), // Space between months and today section
+          const SizedBox(height: 40), // Space between months and today section
 
           // Today's Date Section
           Padding(
@@ -132,7 +132,7 @@ class _TestState extends State<Test> {
                 print("Navigating to today's sentiment screen.");
               },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                 decoration: BoxDecoration(
                   color: Colors.blueAccent.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(12),
@@ -141,8 +141,8 @@ class _TestState extends State<Test> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.calendar_today, color: Colors.blueAccent),
-                    SizedBox(width: 10),
+                    const Icon(Icons.calendar_today, color: Colors.blueAccent),
+                    const SizedBox(width: 10),
                     Text(
                       "Today's Date: ${DateFormat("d MMMM yyyy").format(DateTime.now())}",
                       style: GoogleFonts.poppins(
@@ -171,7 +171,7 @@ class _TestState extends State<Test> {
                     color: Colors.black,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 ...dates.map((date) {
                   return ListTile(
                     contentPadding: EdgeInsets.zero,
@@ -181,7 +181,7 @@ class _TestState extends State<Test> {
                       // Navigate to the sentiment screen for that date
                     },
                   );
-                }).toList(),
+                }),
               ],
             ),
           ),

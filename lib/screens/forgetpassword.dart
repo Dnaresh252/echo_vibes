@@ -165,12 +165,12 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       ),
                       const SizedBox(height: 50),
                       _isLoading
-                          ? Padding(
+                          ? const Padding(
                             padding:  EdgeInsets.only(left:30),
-                            child: const CircularProgressIndicator(),
+                            child: CircularProgressIndicator(),
                           )
                           : Padding(
-                        padding:  EdgeInsets.only(left:40),
+                        padding:  const EdgeInsets.only(left:40),
                         child: GestureDetector(
                             onTap: _resetPassword,
                             child: Container(

@@ -21,7 +21,7 @@ class _SplashscreenState extends State<Splashscreen> {
 
   PageRouteBuilder _createFadeTransitionRoute() {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) =>  Firstpage(),
+      pageBuilder: (context, animation, secondaryAnimation) =>  const Firstpage(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = 0.0;
         const end = 1.0;
@@ -45,7 +45,7 @@ class _SplashscreenState extends State<Splashscreen> {
         children: [
           // You can replace this with your logo or image
           Center(child: Image(image: AssetImage('assets/Echo.png'))),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
 
         ],
       ),

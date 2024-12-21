@@ -94,7 +94,7 @@ class _LoginscreenState extends State<Loginscreen> {
         // Navigate to HomeScreen and replace LoginScreen
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => Test()),
+          MaterialPageRoute(builder: (context) => const Test()),
         );
       }
     } catch (e) {
@@ -199,7 +199,7 @@ class _LoginscreenState extends State<Loginscreen> {
                           height: 20,
                           width: 20,
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Text(
                           "Sign in with Google",
                           style: GoogleFonts.inter(fontWeight: FontWeight.bold),
@@ -217,12 +217,12 @@ class _LoginscreenState extends State<Loginscreen> {
                       height: 1,
                       color: Colors.black38,
                     ),
-                    SizedBox(width: 6),
+                    const SizedBox(width: 6),
                     Text(
                       "or",
                       style: GoogleFonts.roboto(color: Colors.black54),
                     ),
-                    SizedBox(width: 6),
+                    const SizedBox(width: 6),
                     Container(
                       width: screenWidth * 0.2,
                       height: 1,
@@ -240,8 +240,8 @@ class _LoginscreenState extends State<Loginscreen> {
                     style: GoogleFonts.inter(fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(height: 5),
-                Container(
+                const SizedBox(height: 5),
+                SizedBox(
                   width: screenWidth * 0.8,
                   height: screenHeight * 0.045,
                   child: TextField(
@@ -249,21 +249,21 @@ class _LoginscreenState extends State<Loginscreen> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.black),
+                        borderSide: const BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color.fromRGBO(37, 113, 128, 1),
                           width: 2,
                         ),
                       ),
-                      contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                      prefixIcon: Icon(Icons.person_outline, size: 15),
+                      contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                      prefixIcon: const Icon(Icons.person_outline, size: 15),
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
@@ -271,8 +271,8 @@ class _LoginscreenState extends State<Loginscreen> {
                     style: GoogleFonts.inter(fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(height: 5),
-                Container(
+                const SizedBox(height: 5),
+                SizedBox(
                   width: screenWidth * 0.8,
                   height: 45,
                   child: TextField(
@@ -281,16 +281,16 @@ class _LoginscreenState extends State<Loginscreen> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.black),
+                        borderSide: const BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color.fromRGBO(37, 113, 128, 1),
                           width: 2,
                         ),
                       ),
-                      contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                      contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                       prefixIcon: const Icon(Icons.password, size: 15),
                       suffixIcon: IconButton(
                         icon: Icon(
@@ -306,7 +306,7 @@ class _LoginscreenState extends State<Loginscreen> {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetPassword()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const ForgetPassword()));
                     },
                     child: Text(
                       "Forget Password?",
@@ -353,7 +353,7 @@ class _LoginscreenState extends State<Loginscreen> {
                     GestureDetector(
                       onTap: ()
                       {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Signup()));
                       },
                       child: Text("Sign up",style: GoogleFonts.inter(
                           fontWeight: FontWeight.bold,
